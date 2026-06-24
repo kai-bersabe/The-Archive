@@ -1,0 +1,212 @@
+@font-face{
+    font-family:'Moonwalk';
+    src:url('Moon Walk.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+    height:100vh;
+}
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+    ),
+    url("background.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    animation:zoom 10s ease-in-out infinite alternate;
+
+    z-index:-2;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.12);
+}
+
+@keyframes zoom{
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.05);
+    }
+}
+
+.content{
+    position:relative;
+    z-index:10;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+
+    animation:fade 1.2s ease;
+}
+
+.logo{
+
+    width:180px;
+
+    margin-bottom:25px;
+
+}
+
+.title{
+
+    font-family:'Moonwalk',sans-serif;
+
+    font-size:95px;
+
+    font-weight:normal;
+
+    letter-spacing:3px;
+
+    line-height:1;
+
+    margin-bottom:15px;
+
+    color:white;
+
+    text-shadow:0 8px 25px rgba(0,0,0,.45);
+
+}
+
+.subtitle{
+
+    font-size:24px;
+
+    font-weight:500;
+
+    letter-spacing:3px;
+
+    margin-bottom:18px;
+
+}
+
+.subtitle2{
+
+    font-size:18px;
+
+    font-weight:300;
+
+    max-width:700px;
+
+    line-height:1.8;
+
+    color:rgba(255,255,255,.92);
+
+    margin-bottom:45px;
+
+}
+
+.button{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:16px 52px;
+
+    border:2px solid white;
+
+    border-radius:50px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    transition:.4s;
+
+}
+
+.button:hover{
+
+    background:white;
+
+    color:black;
+
+    transform:translateY(-4px) scale(1.03);
+
+}
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .logo{
+        width:110px;
+    }
+
+    .title{
+        font-size:60px;
+        letter-spacing:2px;
+    }
+
+    .subtitle{
+        font-size:18px;
+    }
+
+    .subtitle2{
+        font-size:15px;
+        max-width:90%;
+    }
+
+    .button{
+        font-size:16px;
+        padding:13px 30px;
+    }
+
+}

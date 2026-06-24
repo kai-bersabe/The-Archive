@@ -1,0 +1,731 @@
+@font-face{
+    font-family:'Moonwalk';
+    src:url('Moon Walk.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:#061B3A;
+
+    color:#ffffff;
+
+    overflow-x:hidden;
+
+}
+
+/*SECTION*/
+
+section{
+
+    padding:100px 10%;
+
+}
+
+.section-title{
+
+    font-family:'Moonwalk', sans-serif;
+    font-size:clamp(2.8rem,5vw,4.5rem);
+    letter-spacing:8px;
+    text-transform:uppercase;
+    text-align:center;
+    color:#fff;
+    margin-bottom:60px;
+
+}
+
+/*HERO*/
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero-slideshow{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+.hero-slide{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:0;
+
+    transform:scale(1);
+
+    transition:
+        opacity 1.8s ease,
+        transform 8s linear;
+
+}
+
+.hero-slide.active{
+
+    opacity:1;
+
+    transform:scale(1.08);
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(6,27,58,.45);
+
+    z-index:2;
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:3;
+
+    max-width:900px;
+
+    padding:0 25px;
+
+    text-align:center;
+
+}
+
+.hero-content h1{
+
+    font-family:'Moonwalk';
+
+    font-size:clamp(4rem,8vw,7rem);
+
+    letter-spacing:8px;
+
+    margin-bottom:18px;
+
+    color:white;
+
+}
+
+.hero-content p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:19px;
+
+    font-weight:300;
+
+    line-height:1.8;
+
+    color:rgba(255,255,255,.88);
+
+}
+
+/*ABOUT SECTION*/
+
+.about{
+
+    background:#0c1c33;
+    max-width:1000px;
+    margin:0 auto;
+    padding:120px 40px;
+    text-align:center;
+
+}
+
+.about .section-title{
+
+    margin-bottom:50px;
+
+}
+
+.about p{
+
+    max-width:850px;
+    margin:0 auto;
+    color:#d8d8d8;
+    font-size:18px;
+    line-height:2.1;
+    letter-spacing:.5px;
+    font-weight:300;
+
+}
+
+.about strong{
+
+    color:#fff;
+    font-weight:600;
+
+}
+
+.about-list{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px 50px;
+
+    list-style:none;
+
+    padding:0;
+
+    margin:50px auto;
+
+    max-width:700px;
+
+}
+
+.about-list li{
+
+    padding:14px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    color:#f5f5f5;
+
+    font-size:17px;
+
+    transition:.3s;
+
+}
+
+.about-list li:hover{
+
+    color:#fff;
+
+    transform:translateX(5px);
+
+}
+
+@media(max-width:768px){
+
+    .about{
+
+        padding:80px 25px;
+
+    }
+
+    .about p{
+
+        font-size:16px;
+
+        line-height:1.9;
+
+    }
+
+    .about-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/*COLLECTIONS*/
+
+.collections{
+
+    background: #0A2D5E;
+;
+
+}
+
+.album-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+}
+
+.album{
+
+    position:relative;
+
+    height:260px;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    background:#173B6C;
+
+    border:1px solid rgba(230,230,230,.15);
+
+    box-shadow:0 12px 35px rgba(0,0,0,.35);
+
+}
+
+.album img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s;
+
+}
+
+.album:hover img{
+
+    transform:scale(1.12);
+
+}
+
+.album:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:30px;
+
+    background:linear-gradient(
+
+        transparent,
+
+        rgba(0,0,0,.88)
+
+    );
+
+}
+
+.overlay h3{
+
+    font-size:30px;
+
+    margin-bottom:8px;
+
+}
+
+.overlay p{
+
+    letter-spacing:2px;
+
+    opacity:.85;
+
+}
+
+/* EVENT SELECTION */
+
+.event-selection{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    margin-bottom:50px;
+
+}
+
+.event-card{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:140px;
+
+    background:#8a9ebb;
+
+    border:1px solid rgba(255, 255, 255, 0.74);
+
+    box-shadow:0 12px 35px rgba(41, 40, 40, 0.35);
+
+    background:linear-gradient(
+
+    transparent,#002157
+
+    );
+
+    border-radius:18px;
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.event-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#ffffff;
+
+    background:#202020;
+
+}
+
+.event-card h3{
+
+    font-size:24px;
+
+    font-weight:600;
+
+    text-align:center;
+
+}
+
+/*BUTTONS*/
+
+button{
+
+    background:#ffffff;
+
+    color:#000000;
+
+    border:none;
+
+    padding:14px 35px;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:scale(1.05);
+
+    background:#e7e7e7;
+
+}
+
+/*HOW TO BOOK*/
+
+.steps{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:20px;
+
+    font-size:20px;
+
+    letter-spacing:1px;
+
+}
+
+.steps span{
+
+    opacity:.9;
+
+}
+
+/*BOOKING FORM*/
+
+.booking{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+form{
+
+    width:100%;
+
+    max-width:650px;
+
+    display:grid;
+
+    gap:18px;
+
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1d1d1d;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#bcbcbc;
+
+}
+
+textarea{
+
+    min-height:140px;
+
+    resize:none;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border:1px solid #ffffff;
+
+}
+
+/*CONTACT*/
+
+.contact{
+
+    text-align:center;
+
+}
+
+.contact p{
+
+    margin-bottom:12px;
+
+    font-size:18px;
+
+    opacity:.85;
+
+}
+
+/*FOOTER*/
+
+
+footer{
+
+    background:#041328;
+
+    color:#A8AFB8;
+
+    padding:35px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    opacity:.55;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+/*SMOOTH ANIMATIONS*/
+
+.album,
+.card,
+button{
+
+    transition:all .35s ease;
+
+}
+
+/*RESPONSIVE*/
+
+@media (max-width:992px){
+
+    .hero h1{
+
+        font-size:80px;
+
+    }
+
+    .hero p{
+
+        font-size:18px;
+
+    }
+
+    section{
+
+        padding:80px 8%;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .hero{
+
+        height:100vh;
+
+    }
+
+    .hero h1{
+
+        font-size:55px;
+
+        letter-spacing:3px;
+
+    }
+
+    .hero p{
+
+        font-size:16px;
+
+    }
+
+    .section-title{
+
+        font-size:34px;
+
+    }
+
+    .album-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .packages{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .card{
+
+        max-width:100%;
+
+    }
+
+    section{
+
+        padding:70px 7%;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .hero h1{
+
+        font-size:42px;
+
+    }
+
+    .hero p{
+
+        font-size:14px;
+
+    }
+
+    .section-title{
+
+        font-size:28px;
+
+    }
+
+    .overlay h3{
+
+        font-size:24px;
+
+    }
+
+    .overlay p{
+
+        font-size:14px;
+
+    }
+
+    input,
+    select,
+    textarea{
+
+        font-size:14px;
+
+    }
+
+    button{
+
+        width:100%;
+
+    }
+
+}

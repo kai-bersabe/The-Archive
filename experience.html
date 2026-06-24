@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>THE ARCHIVE | Experience</title>
+
+<link rel="stylesheet" href="experience.css">
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-analytics.js";
+
+const firebaseConfig = {
+
+    apiKey: "AIzaSyD1aZUxinoTEgCNRWUTnmH-vc_J2Rzpjpc",
+    authDomain: "the-archive-f8fe7.firebaseapp.com",
+    projectId: "the-archive-f8fe7",
+    storageBucket: "the-archive-f8fe7.firebasestorage.app",
+    messagingSenderId: "1050705397331",
+    appId: "1:1050705397331:web:6240657a639141a6fc28a6",
+    measurementId: "G-PHD59RG75X"
+
+};
+
+const app = initializeApp(firebaseConfig);
+getAnalytics(app);
+
+</script>
+
+</head>
+
+<body>
+
+<!--HERO-->
+
+<section class="hero">
+
+    <div class="hero-slideshow">
+
+        <img src="1.JPG" class="hero-slide active" alt="Hero Image 1">
+        <img src="2.JPG" class="hero-slide" alt="Hero Image 2">
+        <img src="3.JPG" class="hero-slide" alt="Hero Image 3">
+        <img src="4.JPG" class="hero-slide" alt="Hero Image 4">
+        <img src="5.JPG" class="hero-slide" alt="Hero Image 5">
+        <img src="6.JPG" class="hero-slide" alt="Hero Image 6">
+
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>THE ARCHIVE</h1>
+
+        <p>
+            is a premium photography and videography studio dedicated to preserving life's most meaningful moments through timeless imagery and cinematic storytelling. We believe that every photograph should tell a story—capturing genuine emotions, authentic connections, and memories that will be cherished for generations.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about">
+
+    <h2 class="section-title">ABOUT US</h2>
+
+    <p>
+
+        Founded as a passion project in 2023 and officially established as a business in 2024, THE ARCHIVE has grown into a trusted creative brand recognized for its distinctive visual identity, premium-quality work, and commitment to excellence. Every project is approached with creativity, precision, and a passion for delivering exceptional results.
+        <br><br>
+
+        More than simply documenting events, our mission is to redefine the standards of modern photography and videography through intentional storytelling and refined artistry. We strive to create a unique client experience that reflects elegance, authenticity, and professionalism in every frame.
+        <br><br>
+
+        We proudly offer professional photography and videography services for a wide range of occasions, including:
+    </p>
+
+    <ul class="about-list">
+        <li>Weddings</li>
+        <li>Debuts & Birthday Celebrations</li>
+        <li>Christenings</li>
+        <li>Family Reunions</li>
+        <li>Pre-Graduation & Graduation Shoots</li>
+        <li>Recognition Ceremonies</li>
+        <li>Corporate Events</li>
+        <li>And many more special occasions.</li>
+    </ul>
+
+    <p>
+        At <strong>THE ARCHIVE</strong>, every story deserves to be preserved—not just as photographs and videos, but as timeless memories that can be relived and treasured for years to come.
+    </p>
+
+</section>
+
+<!-- ================= COLLECTIONS ================= -->
+
+<section class="collections">
+
+    <h2 class="section-title">COLLECTIONS</h2>
+
+    <div class="album-grid">
+
+        <div class="album">
+
+            <img src="graduation.jpg" alt="Graduation">
+
+            <div class="overlay">
+                <h3>Graduation</h3>
+                <p>View Album</p>
+            </div>
+
+        </div>
+
+        <div class="album">
+
+            <img src="pre-grad.jpg" alt="Pre-Graduation">
+
+            <div class="overlay">
+                <h3>Pre-Graduation</h3>
+                <p>View Album</p>
+            </div>
+
+        </div>
+
+        <div class="album">
+
+            <img src="clinical.jpg" alt="Clinical Graduation">
+
+            <div class="overlay">
+                <h3>Clinical Graduation</h3>
+                <p>View Album</p>
+            </div>
+
+        </div>
+
+        <div class="album">
+
+            <img src="christening.jpg" alt="Christening">
+
+            <div class="overlay">
+                <h3>Christening</h3>
+                <p>View Album</p>
+            </div>
+
+        </div>
+
+        <div class="album">
+
+            <img src="reunion.jpg" alt="Reunion">
+
+            <div class="overlay">
+                <h3>Reunion</h3>
+                <p>View Album</p>
+            </div>
+
+        </div>
+
+        <div class="album">
+
+            <img src="birthday.jpg" alt="Birthday">
+
+            <div class="overlay">
+                <h3>Birthday</h3>
+                <p>View Album</p>
+            </div>
+
+        </div>
+
+        <div class="album">
+
+            <img src="others.jpg" alt="Others">
+
+            <div class="overlay">
+                <h3>Others</h3>
+                <p>View Album</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= EVENT CHOICES ================= -->
+
+<section class="event-section">
+
+    <h2 class="section-title">PACKAGES</h2>
+
+    <div class="event-selection">
+
+        <a href="wedding.html" class="event-card">
+            <h3>Wedding</h3>
+        </a>
+
+        <a href="birthday.html" class="event-card">
+            <h3>Birthday</h3>
+        </a>
+
+        <a href="pregrad.html" class="event-card">
+            <h3>Pre-Graduation</h3>
+        </a>
+
+        <a href="graduation.html" class="event-card">
+            <h3>Graduation</h3>
+        </a>
+
+        <a href="christening.html" class="event-card">
+            <h3>Christening</h3>
+        </a>
+
+        <a href="capandpin.html" class="event-card">
+            <h3>Capping and Pinning</h3>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW TO BOOK ================= -->
+
+<section class="how-book">
+
+    <h2 class="section-title">HOW TO BOOK</h2>
+
+    <div class="steps">
+
+        <span>① Choose your Package</span>
+
+        <span>↓</span>
+
+        <span>② Select your Preferred Date</span>
+
+        <span>↓</span>
+
+        <span>③ Fill out the Booking Form</span>
+
+        <span>↓</span>
+
+        <span>④ Wait for our Confirmation</span>
+
+    </div>
+
+</section>
+
+<!-- ================= BOOKING FORM ================= -->
+
+<section class="booking">
+
+    <h2 class="section-title">BOOK YOUR SESSION</h2>
+
+    <form id="bookingForm">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Full Name"
+            required
+        >
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Email Address"
+            required
+        >
+
+        <input
+            type="text"
+            id="phone"
+            placeholder="Phone Number"
+            required
+        >
+
+        <select id="package" required>
+
+            <option value="">Select Package</option>
+            <option value="Basic">Basic</option>
+            <option value="Premium">Premium</option>
+            <option value="Deluxe">Deluxe</option>
+
+        </select>
+
+        <input
+            type="date"
+            id="date"
+            required
+        >
+
+        <input
+            type="time"
+            id="time"
+            required
+        >
+
+        <textarea
+            id="message"
+            placeholder="Additional Notes"
+        ></textarea>
+
+        <button type="submit">
+            SUBMIT BOOKING
+        </button>
+
+    </form>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact">
+
+    <h2 class="section-title">CONTACT US</h2>
+
+    <p>THE ARCHIVE Studio</p>
+    <p>thearchive@email.com</p>
+    <p>+63 9XX XXX XXXX</p>
+    <p>Facebook | Instagram</p>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026 THE ARCHIVE. All Rights Reserved.
+
+</footer>
+
+<script>
+
+const bookingForm = document.getElementById("bookingForm");
+
+bookingForm.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const bookingData = {
+
+        name: document.getElementById("name").value,
+
+        email: document.getElementById("email").value,
+
+        phone: document.getElementById("phone").value,
+
+        package: document.getElementById("package").value,
+
+        date: document.getElementById("date").value,
+
+        time: document.getElementById("time").value,
+
+        message: document.getElementById("message").value
+
+    };
+
+    console.log(bookingData);
+
+    alert("Thank you! Your booking request has been submitted.");
+
+    bookingForm.reset();
+
+});
+
+/* ==============================
+   HERO SLIDESHOW
+============================== */
+
+const slides = document.querySelectorAll(".hero-slide");
+
+let currentSlide = 0;
+
+function changeSlide(){
+
+    slides[currentSlide].classList.remove("active");
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+
+        currentSlide = 0;
+
+    }
+
+    slides[currentSlide].classList.add("active");
+
+}
+
+setInterval(changeSlide, 5000);
+
+/* ===============================
+   PACKAGE TABS
+================================ */
+
+const tabButtons = document.querySelectorAll(".tab-btn");
+const packageContents = document.querySelectorAll(".package-content");
+
+tabButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+
+        packageContents.forEach(content => {
+
+            content.classList.remove("active");
+
+        });
+
+        button.classList.add("active");
+
+        document
+            .getElementById(button.dataset.tab)
+            .classList.add("active");
+
+    });
+
+});
+
+
+/* ===============================
+   BOOK PACKAGE
+================================ */
+
+const packageButtons = document.querySelectorAll(".package-btn");
+
+packageButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const selectedPackage = button.dataset.package;
+
+        document.getElementById("package").value = selectedPackage;
+
+        document.getElementById("booking").scrollIntoView({
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
